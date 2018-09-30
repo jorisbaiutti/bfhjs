@@ -1,4 +1,3 @@
-
 function charToMorse(char) {
     var alphabetString =
         "a=.-;b=-...;c=-.-.;d=-..;e=.;f=..-;g=--.;h=....;i=..;j=.---;k=-.-;l=.-..;" +
@@ -9,7 +8,6 @@ function charToMorse(char) {
     if (item) {
         return item.split('=')[1];
     }
-
 }
 
 function stringToMorse(text) {
@@ -20,6 +18,6 @@ function stringToMorse(text) {
     }
     return morse;
 }
-
 console.log(stringToMorse("Hallo"));
+
 
