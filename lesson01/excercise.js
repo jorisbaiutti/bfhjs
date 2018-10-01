@@ -14,7 +14,7 @@ function stringToMorse(text) {
     var morse = "";
     text = text.toLowerCase();
     for (var i = 0; i < text.length; i++) {
-        morse += charToMorse(text.charAt(i)) + ";";
+        morse += charToMorse(text.charAt(i)) + "/";
     }
     return morse;
 }
