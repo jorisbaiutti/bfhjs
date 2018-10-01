@@ -5,8 +5,8 @@ function Char(value, string) {
 
 function Font(name, chars) {
     this._name = name;
-    this._alphabet = {}
-    chars.forEach(c => this._alphabet[c.value] = c.string)
+    this._alphabet = {}; //oder wenn nicht von Object erben soll Object.create(null);
+    chars.forEach(c => this._alphabet[c.value] = c.string) //mit function hätte das this als parameter mitgegeben werden müssen oder mit bind(this)
 }
 
 
