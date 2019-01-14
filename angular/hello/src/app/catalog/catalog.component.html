@@ -1,0 +1,28 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>ISBN</th>
+      <th>Title</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books | async" (click)="selectBook(book)">
+      <td>{{ book.isbn }}</td>
+      <td>{{ book.title }}</td>
+      <td>{{ book.price }}</td>
+    </tr>
+  </tbody>
+</table>
+<input class="form-control" name="keywords" [(ngModel)]="keyWords">
+<a class="btn btn-primary" (click)="searchBooks()">search</a>
+<div *ngIf="searchResults">
+  <app-bookdetails *ngFor="let result of searchResults" [book]="result"></app-bookdetails>
+</div>
+
+<div *ngIf="selectedBook">
+  <app-bookdetails [book]="selectedBook" (back)="selectedBook=null" ></app-bookdetails>
+</div>
+
+
+

@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" [src]="book.imageUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{book.title}}</h5>
+      <p class="card-text">{{book.description}}</p>
+      <a class="btn btn-primary" (click)="back.emit()">Back</a>
+      <a class="btn btn-primary" (click)="orderBook()">Order</a>
+    </div>
+  </div>
